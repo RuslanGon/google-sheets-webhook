@@ -1,4 +1,4 @@
-// src/routes/webhookRoutes.js
+
 import express from 'express';
 import { handleNewRow, getAllRows, getRowById } from '../controllers/webhookController.js';
 
