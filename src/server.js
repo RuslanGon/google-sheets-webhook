@@ -1,4 +1,3 @@
-// src/server.js
 
 import express from 'express';
 import connectDB from './config/db.js';
@@ -8,16 +7,13 @@ import setupSwagger from './docs/swagger.js';
 
 const app = express();
 
-
 connectDB();
 
-
 app.use(express.json());
+
 app.use(logger);
 
-
 setupSwagger(app);
-
 
 app.use('/api', webhookRoutes);
 

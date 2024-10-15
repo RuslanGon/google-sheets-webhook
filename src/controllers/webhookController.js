@@ -1,6 +1,5 @@
 import Row from '../models/rowModel.js';
 
-
 export const handleNewRow = async (req, res) => {
   try {
     const newRow = new Row(req.body);
@@ -11,7 +10,6 @@ export const handleNewRow = async (req, res) => {
   }
 };
 
-
 export const getAllRows = async (req, res) => {
   try {
     const rows = await Row.find();
@@ -20,7 +18,6 @@ export const getAllRows = async (req, res) => {
     res.status(500).json({ message: 'Error fetching rows', error: error.message });
   }
 };
-
 
 export const getRowById = async (req, res) => {
   try {

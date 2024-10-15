@@ -3,7 +3,6 @@ import Row from '../models/rowModel.js';
 
 const router = express.Router();
 
-
 router.post('/rows', async (req, res) => {
   try {
     const newRow = new Row(req.body);
@@ -34,5 +33,6 @@ router.get('/rows/:id', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+
 
 export default router;

@@ -1,7 +1,6 @@
 
 const { google } = require('googleapis');
 const path = require('path');
-// const fs = require('fs');
 
 const authenticateGoogle = () => {
   const keyFilePath = path.join(__dirname, '../../credentials.json');
@@ -11,7 +10,6 @@ const authenticateGoogle = () => {
     keyFile: keyFilePath,
     scopes: scopes,
   });
-
   return auth;
 };
 
