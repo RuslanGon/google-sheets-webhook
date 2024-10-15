@@ -1,4 +1,4 @@
-// src/config/db.js
+
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
@@ -6,7 +6,7 @@ dotenv.config();
 
 const connectDB = async () => {
   try {
-    const uri = `mongodb+srv://ruslan441006:EdPArI5f5dfC5pQw@cluster0.mavti.mongodb.net/?retryWrites=true&w=majority`;
+    const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_URL}/${process.env.MONGODB_DB}?retryWrites=true&w=majority`;
 
     await mongoose.connect(uri, {
       useNewUrlParser: true,
